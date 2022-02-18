@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    max-width: 1440px;
+    max-height: 100vh;
+}
+.main-container {
+    display: grid;
+    height: 700px;
+    background-color: hsl(204, 43%, 93%);
+    grid-template-rows: 235px 235px;
+    grid-template-columns: 310px 310px;
+    grid-template-areas: 
+       'a a'
+       'b c'    
+    ;
+    align-content: center;
+    justify-content: center;
+}
+.div1 {
+    display: grid;
+    background-color: white;
+    grid-area: a;
+    border-radius: 10px 10px 0 0;
+    color: gray;
+    font-weight: bolder;
+    padding: 40px 72px 0px 25px;
+    line-height: 27px;
+}
+.div2 {
+    display: grid;
+    background-color: hsl(179, 62%, 43%);
+    grid-area: b;
+    border-radius: 0px 0px 0px 10px;
+    color: white;
+    padding: 27px 0px 28px 25px;
+    line-height: 0px;
+}
+.div3 {
+    display: grid;
+    background-color: hsl(218, 22%, 67%);
+    grid-area: c;
+    border-radius: 0px 0px 10px 0px;
+    color: white;
+    font-size: 14px;
+    padding: 15px 71px 25px 35px;
+    line-height: 17px;
+    
+}
+
+button {
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    width: 255px;
+    height: 57px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background .3s;
+}
+p {
+    margin-left: 20px;
+    text-align: left;
+    
+}
+#p2 {
+    color: hsl(71, 73%, 54%);
+    font-weight: bolder;
+    margin: 0;
+}
+#p1 {
+    color: hsl(179, 62%, 43%);
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 0;
+}
+#b {
+    font-size: 30px;
+    text-align: left;
+}
+h3 {
+    padding-left: 20px;
+}
+
+.btn:hover {
+    background-color: chartreuse;
+}
+.btn:active {
+    color: green;
+}
+
+@media (max-width: 650px) {
+
+
+    .main-container {
+    flex-wrap: wrap;    
+    display: grid;
+    grid-template-rows: 270px;    
+    grid-template-columns: 330px;
+    grid-template-areas: 
+       'a '
+       'b'
+       'c'    
+    }
+    .div2 {
+        border-radius: 0px;
+    }
+    .div3 {
+        border-radius: 0px 0px 10px 10px;
+    }
+}
